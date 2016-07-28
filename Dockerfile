@@ -3,7 +3,7 @@ FROM java:8-jdk-alpine
 RUN apk update \
     && apk add --no-cache --update ca-certificates \
     && update-ca-certificates \
-    && apk add wget
+    && apk add --no-cache wget
 
 RUN update-ca-certificates
 RUN mkdir -p /opt \
