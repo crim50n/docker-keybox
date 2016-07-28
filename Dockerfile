@@ -1,5 +1,6 @@
 FROM java:8-jdk-alpine
 
+RUN apk add --no-cache ca-certificates
 RUN mkdir -p /opt \
     && wget -qO- "https://github.com/skavanagh/KeyBox/releases/download/v2.86.00/keybox-jetty-v2.86_00.tar.gz" \
     | tar -xzC /opt
